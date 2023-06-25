@@ -9,6 +9,7 @@ setup(
         '': ['*.asdl'],
     },
     install_requires=[
+        'transformers==2.5.1',
         'asdl~=0.1.5',
         'astor~=0.7.1',
         'attrs~=18.2.0',
@@ -25,10 +26,10 @@ setup(
         'records~=0.5.3',
         'stanford-corenlp~=3.9.2',
         'tabulate~=0.8.6',
-        'torch~=1.3.1',
+        'torch~=1.7.0',
         'torchtext~=0.3.1',
         'tqdm~=4.36.1',
-        'transformers~=2.3.0',
+        'protobuf==3.20.*',
     ],
     entry_points={"console_scripts": ["ratsql=run:main"]},
 )
