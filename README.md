@@ -65,11 +65,11 @@ It assumes that you mount the datasets downloaded in Step 1 as a volume `/mnt/da
 Thus, the environment setup for RAT-SQL is:
 ``` bash
 docker build -t ratsql .
-docker run --rm -m4g -v /path/to/data:/mnt/data -it ratsql
+docker run --rm -m8g -v /path/to/data:/mnt/data -it ratsql
 ```
 Note that the image requires at least 4 GB of RAM to run preprocessing.
 By default, [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) and [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows) run containers with 2 GB of RAM.
-The `-m4g` switch overrides it; alternatively, you can increase the default limit in the Docker Desktop settings.
+The `-m8g` switch overrides it; alternatively, you can increase the default limit in the Docker Desktop settings.
 
 > If you prefer to set up and run the codebase without Docker, follow the steps in `Dockerfile` one by one.
 > Note that this repository requires Python 3.7 or higher and a JVM to run [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/).
